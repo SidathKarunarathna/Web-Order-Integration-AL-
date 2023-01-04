@@ -1,9 +1,9 @@
 xmlport 50141 "Import web orders"
 {
     Caption = 'Import web orders';
-    Format=VariableText;
-    Direction=Import;
-    UseRequestPage=false;
+    Format = VariableText;
+    Direction = Import;
+    UseRequestPage = false;
 
     schema
     {
@@ -52,20 +52,19 @@ xmlport 50141 "Import web orders"
                 var
                     myInt: Integer;
                 begin
-                    if WebOrder.get(WebOrder."Document Type",WebOrder."Document No.",WebOrder."Line No.") then
-                    begin
+                    if WebOrder.get(WebOrder."Document Type", WebOrder."Document No.", WebOrder."Line No.") then begin
                         currXMLport.Skip();
                     end
                     else begin
-                        WebOrder."Imported Date":=Today;
-                        WebOrder."Imported Time":=Time;
-                        WebOrder."Imported User":= UserId;
+                        WebOrder."Imported Date" := Today;
+                        WebOrder."Imported Time" := Time;
+                        WebOrder."Imported User" := UserId;
                     end;
-                            
+
                 end;
             }
         }
     }
-   
-    
+
+
 }

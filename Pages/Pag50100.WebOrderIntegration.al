@@ -178,8 +178,8 @@ page 50127 WebOrderIntegration
             action("Import/Export Data from XmlPort")
             {
                 ApplicationArea = All;
-                Caption = 'Import Data From CSV';
-                Image = Database;
+                Caption = 'Import From CSV';
+                Image = Document;
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedCategory = Process;

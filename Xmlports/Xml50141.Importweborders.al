@@ -1,6 +1,6 @@
-xmlport 50141 "Export web orders"
+xmlport 50141 "Import web orders"
 {
-    Caption = 'Export web orders';
+    Caption = 'Import web orders';
     Format=VariableText;
     Direction=Import;
     UseRequestPage=false;

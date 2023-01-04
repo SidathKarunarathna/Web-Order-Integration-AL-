@@ -175,6 +175,22 @@ page 50127 WebOrderIntegration
                 end;
 
             }
+            action("Import/Export Data from XmlPort")
+            {
+                ApplicationArea = All;
+                Caption = 'Import Data From CSV';
+                Image = Database;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                ShortcutKey = 'f11';
+                ToolTip = 'Export Data ';
+                trigger OnAction()
+                begin
+                    Xmlport.Run(50141, false, true, Rec);
+                end;
+
+            }
         }
     }
     procedure ImportTimeSheetFromExcel()
